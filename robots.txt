@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://monblog.vercel.app/sitemap.xml
