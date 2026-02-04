@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferme Avicole Élite | Élevage de Qualité</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-gray-800">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-egg text-yellow-600 text-2xl"></i>
+                <span class="text-2xl font-bold text-green-800">AvicolePro</span>
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#accueil" class="hover:text-green-600 transition">Accueil</a>
+                <a href="#services" class="hover:text-green-600 transition">Nos Produits</a>
+                <a href="#expert" class="hover:text-green-600 transition">Expertise</a>
+                <a href="#contact" class="bg-green-700 text-white px-5 py-2 rounded-full hover:bg-green-800 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="accueil" class="relative bg-green-900 text-white py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">L'Excellence de l'Élevage Avicole</h1>
+            <p class="text-xl mb-8 text-green-100">Fournisseur de volailles saines et de produits fermiers de premier choix pour particuliers et professionnels.</p>
+            <div class="flex justify-center gap-4">
+                <a href="#contact" class="bg-yellow-500 text-black font-bold px-8 py-3 rounded-lg hover:bg-yellow-400 transition">Commander</a>
+                <a href="#services" class="border-2 border-white px-8 py-3 rounded-lg hover:bg-white hover:text-green-900 transition">Découvrir</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="max-w-6xl mx-auto py-20 px-6">
+        <h2 class="text-3xl font-bold text-center mb-16 text-green-900 underline decoration-yellow-500">Nos Activités</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+                <div class="bg-yellow-100 w-14 h-14 flex items-center justify-center rounded-full mb-6">
+                    <i class="fas fa-feather text-yellow-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Poulets de Chair</h3>
+                <p class="text-gray-600">Élevage en plein air avec une alimentation 100% naturelle pour une viande tendre et savoureuse.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+                <div class="bg-green-100 w-14 h-14 flex items-center justify-center rounded-full mb-6">
+                    <i class="fas fa-boxes-packing text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Vente de Poussins</h3>
+                <p class="text-gray-600">Distribution de poussins d'un jour rigoureusement sélectionnés pour leur robustesse.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+                <div class="bg-red-100 w-14 h-14 flex items-center justify-center rounded-full mb-6">
+                    <i class="fas fa-mortar-pestle text-red-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Alimentation & Conseil</h3>
+                <p class="text-gray-600">Expertise technique pour optimiser votre propre élevage et vente d'aliments équilibrés.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-stone-200 py-20 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-green-900 mb-6">Contactez l'expert avicole</h2>
+                <p class="mb-6 text-lg">Besoin d'un devis pour une livraison en gros ou d'un conseil technique ? Je vous réponds sous 24h.</p>
+                <div class="space-y-4">
+                    <p class="flex items-center space-x-3 text-green-800"><i class="fas fa-phone"></i> <span>+226 XX XX XX XX</span></p>
+                    <p class="flex items-center space-x-3 text-green-800"><i class="fas fa-envelope"></i> <span>contact@ferme-pro.com</span></p>
+                </div>
+            </div>
+            
+            <form action="https://formspree.io/f/votre_id" method="POST" class="bg-white p-8 rounded-2xl shadow-2xl space-y-4">
+                <input type="text" name="nom" placeholder="Votre Nom" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 outline-none" required>
+                <input type="email" name="email" placeholder="Votre Email" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 outline-none" required>
+                <textarea name="message" rows="4" placeholder="Détaillez votre besoin (quantité, type de volaille...)" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 outline-none" required></textarea>
+                <button type="submit" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg hover:bg-green-800 transition shadow-lg">Envoyer la demande</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-green-900 text-white py-10 text-center">
+        <p>&copy; 2026 NEYMATOU - Expert Avicole. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
