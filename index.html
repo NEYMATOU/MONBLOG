@@ -123,14 +123,38 @@
                     <p class="flex items-center space-x-3 text-green-800"><i class="fas fa-envelope"></i> <span>sawadogoneymata09@gmail.com</span></p>
                 </div>
             </div>
-            <form action="https://formspree.io/f/xaqbrkeb" method="POST">
-                <input type="hidden" name="_next" value="https://monblog-alpha.vercel.app/merci">
-                <input type="text" name="name" placeholder="Votre nom" required class="w-full p-4 rounded-lg border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-green-500 outline-none">
-                <input type="email" name="email" placeholder="votre@email.com" required  class="w-full p-4 rounded-lg border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-green-500 outline-none">
-                <textarea name="message" rows="4" placeholder="Votre message..." required class="w-full p-4 rounded-lg border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-green-500 outline-none"></textarea>
-                <button type="submit" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg hover:bg-green-800 transition shadow-lg">Envoyer la demande</button>
-            </form>
-        </div>
+            <form id="monFormulaire" action="https://formspree.io/f/xvgzdkql" method="POST">
+                <input type="text" name="name" placeholder="Nom" required class="text-black p-4 w-full mb-4 border">
+                <input type="email" name="email" placeholder="Email" required class="text-black p-4 w-full mb-4 border">
+                <textarea name="message" placeholder="Message" required class="text-black p-4 w-full mb-4 border"></textarea>
+    
+                <button type="submit" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg">
+                Envoyer la demande
+                </button>
+          </form>
+
+<script>
+  var form = document.getElementById("monFormulaire");
+  form.onsubmit = function(event) {
+    event.preventDefault(); // Empêche le comportement normal
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        // FORCE la redirection vers votre page merci
+        window.location.href = "merci.html";
+      } else {
+        alert("Erreur lors de l'envoi.");
+      }
+    });
+  };
+</script>
+          
     </section>
 
     <footer class="bg-green-900 text-white py-10 text-center">
@@ -140,6 +164,7 @@
 </body>
 
 </html>
+
 
 
 
