@@ -113,61 +113,17 @@
         </div>
     </div>
 </section>
-   <section id="contact" class="bg-stone-200 py-20 px-6">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <h2 class="text-3xl font-bold text-green-900 mb-6">Contactez l'expert avicole</h2>
-            <p class="mb-6 text-lg">Besoin d'un devis pour une livraison en gros ou d'un conseil technique ? Je vous réponds sous 24h.</p>
-            <div class="space-y-4">
-                <p class="flex items-center space-x-3 text-green-800"><i class="fas fa-phone"></i> <span>+226 67 98 76 67</span></p>
-                <p class="flex items-center space-x-3 text-green-800"><i class="fas fa-envelope"></i> <span>sawadogoneymata09@gmail.com</span></p>
-            </div>
-        </div>
+  <form action="https://formspree.io/f/xaqbrkeb" method="POST">
+    <input type="hidden" name="_next" value="https://monblog-alpha.vercel.app/merci.html">
+    
+    <input type="text" name="name" placeholder="Nom" required class="text-black p-4 w-full mb-4 border rounded">
+    <input type="email" name="email" placeholder="Email" required class="text-black p-4 w-full mb-4 border rounded">
+    <textarea name="message" placeholder="Message" required class="text-black p-4 w-full mb-4 border rounded"></textarea>
 
-        <form id="monFormulaire" action="https://formspree.io/f/xvgzdkql" method="POST">
-            <input type="text" name="name" placeholder="Votre nom" required 
-                   class="text-black p-4 w-full mb-4 border border-gray-300 rounded-lg">
-            
-            <input type="email" name="email" placeholder="Votre email" required 
-                   class="text-black p-4 w-full mb-4 border border-gray-300 rounded-lg">
-            
-            <textarea name="message" placeholder="Votre message..." required rows="4" 
-                      class="text-black p-4 w-full mb-4 border border-gray-300 rounded-lg"></textarea>
-
-            <button type="submit" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg hover:bg-green-800 transition shadow-lg">
-                Envoyer la demande
-            </button>
-        </form>
-    </div>
-
-    <script>
-        var form = document.getElementById("monFormulaire");
-        form.onsubmit = function(event) {
-            event.preventDefault();
-            var data = new FormData(event.target);
-            var submitButton = event.target.querySelector('button');
-            submitButton.disabled = true;
-            submitButton.innerText = "Envoi en cours...";
-
-            fetch(event.target.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    // On utilise l'adresse complète pour être sûr que ça marche sur Vercel
-                    window.location.href = "https://monblog-alpha.vercel.app/merci.html";
-                } else {
-                    alert("Oups ! Vérifiez votre connexion ou l'ID Formspree.");
-                    submitButton.disabled = false;
-                    submitButton.innerText = "Envoyer la demande";
-                }
-            }).catch(error => {
-                alert("Erreur technique. Réessayez plus tard.");
-                submitButton.disabled = false;
-            });
-        };
-    </script>
+    <button type="submit" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg">
+        Envoyer la demande
+    </button>
+  </form>
 </section>
 
     <footer class="bg-green-900 text-white py-10 text-center">
@@ -177,6 +133,7 @@
 </body>
 
 </html>
+
 
 
 
