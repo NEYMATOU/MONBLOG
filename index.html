@@ -9,19 +9,20 @@
 </head>
 <body class="bg-stone-50 text-gray-800">
 
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fas fa-egg text-yellow-600 text-2xl"></i>
-                <span class="text-2xl font-bold text-green-800">AvicolePro</span>
-            </div>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#accueil" class="hover:text-green-600 transition">Accueil</a>
-                <a href="#services" class="hover:text-green-600 transition">Nos Produits</a>
-                <a href="#contact" class="bg-green-700 text-white px-5 py-2 rounded-full hover:bg-green-800 transition">Contact</a>
-            </div>
+   <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-egg text-yellow-600 text-2xl"></i>
+            <span class="text-2xl font-bold text-green-800">Avi'ELLES</span>
         </div>
-    </nav>
+        
+        <div class="flex items-center space-x-4 md:space-x-8 font-medium">
+            <a href="#accueil" class="text-sm md:text-base hover:text-green-600 transition">Accueil</a>
+            <a href="#services" class="text-sm md:text-base hover:text-green-600 transition">Nos services</a>
+            <a href="#contact" class="bg-green-700 text-white px-3 py-1.5 md:px-5 md:py-2 rounded-full text-sm md:text-base hover:bg-green-800 transition">Contact</a>
+        </div>
+    </div>
+</nav>
 
     <header id="accueil" class="relative bg-green-900 text-white py-24 px-6">
         <div class="max-w-4xl mx-auto text-center">
@@ -55,7 +56,9 @@
     </div>
 </section>
 <section id="services" class="max-w-6xl mx-auto py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-16 text-green-900 underline decoration-yellow-500">Nos Activités & Solutions</h2>
+   <h2 class="text-3xl font-bold text-center mb-16 text-green-700 underline decoration-yellow-500 block opacity-100 visible" style="color: #15803d !important; display: block !important;">
+    Nos Activités & Solutions
+  </h2>
     
     <div class="grid md:grid-cols-3 gap-10">
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition">
@@ -124,19 +127,17 @@
             </div>
       
 </section>
- <form action="https://formspree.io/f/xaqbrkeb" method="POST">
-    <input type="hidden" name="_next" value="https://monblog-alpha.vercel.app/merci.html">
-    <input type="hidden" name="_captcha" value="false">
-
-    <input type="text" name="name" placeholder="Nom" required class="text-black p-4 w-full mb-4 border rounded bg-white">
-    <input type="email" name="email" placeholder="Email" required class="text-black p-4 w-full mb-4 border rounded bg-white">
-    <textarea name="message" placeholder="Message" required class="text-black p-4 w-full mb-4 border rounded bg-white"></textarea>
-
-    <button type="submit" class="w-full bg-green-700 text-white font-bold py-4 rounded-lg hover:bg-green-800">
-        Envoyer la demande
-    </button>
-</form>
-
+<section id="contact" class="bg-green-900 text-white py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Passer une commande</h2>
+            <form action="https://formspree.io/f/xaqbrkeb" method="POST" class="grid md:grid-cols-2 gap-4 text-gray-900">
+                <input type="text" name="nom" placeholder="Nom complet" class="p-3 rounded-lg" required>
+                <input type="email" name="email" placeholder="Email" class="p-3 rounded-lg" required>
+                <textarea name="message" placeholder="Votre commande (ex: 50 poulets)" class="p-3 rounded-lg md:col-span-2" rows="4" required></textarea>
+                <button type="submit" class="md:col-span-2 bg-yellow-500 text-green-900 font-bold py-3 rounded-lg hover:bg-yellow-400 transition">Envoyer l'E-mail</button>
+            </form>
+        </div>
+    </section>
     <footer class="bg-green-900 text-white py-10 text-center">
         <p>&copy; 2026 NEYMATOU - Expert Avicole. Tous droits réservés.</p>
     </footer>
@@ -144,6 +145,7 @@
 </body>
 
 </html>
+
 
 
 
